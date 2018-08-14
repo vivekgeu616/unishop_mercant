@@ -20,3 +20,4 @@ Auth::routes();
 
 Route::get('/home', 'AdminController@getHome');
 Route::get('logout', 'Auth\LoginController@logout');
+Route::get('/table', 'AdminController@getTable');

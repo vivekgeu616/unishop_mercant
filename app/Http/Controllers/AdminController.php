@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 
+use App\Model\PriceMaster;
+use App\Model\ItemMaster;
+
+
 use DB;
 use App;
 use Auth;
@@ -129,5 +133,52 @@ class AdminController extends Controller
         return view('admin.home');
     }
 
+    public function getTable()
+    {
+        $dir = "/home/vivek/Downloads/demo/";
+        $file = scandir($dir,0);
+       
+        $table_name = array();
+        for($i=2;$i<count($file);$i++)
+        {
+            $table_name[$i] = rtrim($file[$i],".csv");
+             $file_content = explode("\n",file_get_contents("/home/vivek/Downloads/demo/".$file[$i]));
+             // dd($file_content);
+             foreach ($file_content as $key => $value) {
+                 $content[] = explode(",", $value);
+             }
+             // dd($content);
+
+            switch($table_name[$i])
+            {
+                case "Item_master":
+                     
+                    foreach ($content as $key => $item) 
+                    {
+                        $Item_master = new ItemMaster;
+                        $Item_master->store_code = $item; 
+                        $Item_master->item_code = $item; 
+                        $Item_master->item_name = $item; 
+                        $Item_master->mrp1 = $item; 
+                        $Item_master->selling_price = $item; 
+                        $Item_master->promo = $item; 
+                        $Item_master->weighted_flag = $item;  
+                        dd($Item_master);
+                        $Item_master->save();
+                    }
+                    
+                break;
+
+                case "Price_master":
+                     $Item_master = new PriceMaster;
+                     dd("hi");
+                break;
+
+            }
+            
+            
+        }
+        
+     }
 
 }
