@@ -1,0 +1,57 @@
+#tabs ul {
+  list-style:none;
+  padding-top:26px;
+  float:left;
+  
+} 
+#tabs #pg-nav a {
+  color: #4d4d4d;
+  display: block;
+  font-size: 15px;
+  height:auto;
+  line-height: 15px;
+  padding: 0 10px 20px;
+  text-align: left;
+  font-weight:500;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition:all 350ms ease 0s;
+  -webkit-transition:all 350ms ease 0s;
+  -moz-transition:all 350ms ease 0s;
+}
+
+#tabs #pg-nav a:active{
+  background:#fff !important;
+}
+
+#tabs #pg-nav a:hover{
+  color:#00a89c;
+}
+
+#tabs #pg-nav li.current a {
+  padding: 0 45px;
+}
+
+#tabs #pg-nav li{
+  margin-bottom:10px;
+}
+
+#tabs #pg-nav a:active {
+  background: #DDDDDD;
+  color:#FFF;
+ 
+}
+
+
+#tabs ul li:hover {
+    border-bottom:none;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+
+#tabs p {
+text-align:justify;
+line-height:19px;
+}

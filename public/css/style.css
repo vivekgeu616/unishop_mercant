@@ -1,0 +1,681 @@
+@charset "utf-8";
+/* CSS Document */  
+@-ms-viewport{
+    width: device-width;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,div{word-break: break-all;}
+
+*{
+    margin:0; 
+    padding:0; 
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#333;
+    line-height:1.5;
+    margin:0;
+    padding:0;
+    background:#f6f7fa !important; 
+}
+
+.glyphicon.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+img{ border:none;}
+.bold{font-weight:bold;}
+a:link,a:visited{color:#333; text-decoration:none !important;} 
+a:hover,a:active{color:#333; text-decoration:none;}
+ul, ol{list-style:none;}
+a:focus, a:hover{text-decoration:none;}
+:focus{outline:none;}
+.inputs-fields:focus{outline:1px solid #000 !important;}
+div, table, td, tr, th, h1, h2, h3, h4, h5, h6, input, textarea, p, strong, span, ul, ol, li{box-sizing:border-box;} h1, h2, h3, h4, h5, h6{font-weight:normal;}
+
+/* WebKit browsers */ 
+::-webkit-input-placeholder
+{
+    color:    #6f6f6f;
+    opacity:0.5;
+}
+
+/* Mozilla Firefox 19+ */
+::-moz-placeholder
+{
+    color:    #6f6f6f;
+    opacity:  0.5;
+}
+ 
+/* Internet Explorer 10+ */ 
+:-ms-input-placeholder
+{
+    color:    #6f6f6f; 
+    opacity:0.5;
+}
+.inputs-fields::-webkit-input-placeholder{color:#8392af !important; opacity:1;}  
+.inputs-fields:-moz-placeholder{color:#8392af !important; opacity:1;}
+.inputs-fields::-moz-placeholder{color:#8392af !important; opacity:1;}
+.inputs-fields:-ms-input-placeholder{color:#8392af !important; opacity:1;}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'), 
+         url('../fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+.overley{width: 100%; height: 100%; position: absolute; top: 0%; left: 0%; background:rgba(0,0,0,1); z-index: 1000; display: none;} 
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    z-index: 1000;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-bottom: 16px solid blue;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.mainWrap, .top_wrapper, .btm_cont, .eventHding, .tebleHding, .featuresTabs, .featuresInner, .header, .pagesWrapper, .pagesInner, .issuesTopWrapper, .issuesDetails, .detailsinner, .contsBtns, .ContactNavRsult, .ContactsRsult, .user_container, .userRsult, .userCont, .userNav, .userNavRsult, .userEdit_cont, .accessWrap, .userEditWrap, .controlBtn, #issues-inner-div, #notes-inner-div, .controlBtn{width:100%; float:left; clear:both;}
+/*Left Side Bar Css start*/
+.left_panel{width:16%; float:left; padding-top:20px; position:absolute; left:0%; background:#0e1a35;} .logo{width:184px; height:56px; margin-left: 25px; display: inline-block; float: left;} .navigation{width:100%; float:left; clear:both;} .logo img{width: 100%; max-width:140px;} .navigation ul{width:100%; float:left; margin-bottom:0px !important;} .navigation ul li{width:100%; float:left; line-height:75px; color:#fff; font-family:'robotolight'; padding-left:25px; border-top:1px solid #0d172e; border-bottom:1px solid #0d172e; border-left:5px solid #0e1a35; cursor:pointer;} .navigation ul li span{float:left; margin-right:10px;} .navigation ul li a{color:#fff; display: block;} .navigation ul li:hover{background:#122143; border-left-color:#5584ff;}
+/*Left Side Bar Css End*/
+
+/*Right Side Bar Css start*/   
+.Right_panel{width:84%; float:left; position:relative; left:16%;} .top_wrapper{border-bottom:1px solid #d4d9e3; background: #fff;} .Homelogo{ float: left; display: none;} .mediaNavIcon{display: none;} .media_icon, .mediaNavIcon{width:26px; height:20px; margin:25px; float:left; cursor:pointer;} .srchIcon{color:#0e1a35 !important; font-weight:bold !important; margin:25px 0px; font-size:20px !important;} .icon_right{float:right; margin-right:25px;} .icon_right ul{width:100%; float:left; margin-bottom:0px !important;} .icon_right ul li{float:left; padding:0px 5px; line-height:70px;} .icon_right ul li.stngsIcon{font-size:18px !important; color:#0e1a35;} .icon_right ul li.notificationIcon img{width:33px; height:36px;} .icon_right ul li.profileIcon img{width:30px; height:30px; }  .icon_right ul li.arrow{cursor:pointer;} .stngsIcon, .notificationIcon, .profileIcon, .arrow{float:left;}  
+
+/*Media Nav Css start*/ 
+.mediaNav{width:70%; position:absolute; bottom:100%; left:30%; height:100%; min-height:100%; z-index:1; background: #0e1a35; display:none;} .mediaNav ul{width:100%; float:left; margin-bottom:0px; margin-top:87px;} .mediaNav ul li{float:left; width:100%; font-family:"robotomedium",arial; color:#fff; line-height:50px; text-align:right;} .mediaNav ul li a{color:#fff; } .mediaNav ul li span{float:right; margin:0px 15px;} .mediaNav ul li.stngsIcon{font-family: 'Glyphicons Halflings'; padding-right:15px; font-size:22px;} .mediaNav ul li.notificationIcon{padding-right:15px;} .mediaNav ul li.profileIcon{width:22px; height:22px; float:right; margin:15px;} .mediaNav ul li.profileIcon img{width:100%;}
+/*Media NavCss start*/ 
+.pding25px{padding:25px; width:100%; float:left;} .contHding{float:left;} .contHding h1{line-height:70px !important;} .contHding h1, .issuesHding h1{font-family:"robotomedium",arial; color:#0e1a35; margin:0px !important;} .eventHding{margin-bottom:0px; padding:15px 20px; border:1px solid #ddd; border-bottom:0;} .eventHding h3{line-height:32px !important; padding-left: 0px !important;} .tebleHding h3, .eventHding h3{float:left; font-size: 20px; color:#0e1a35; font-family:"robotomedium",arial; line-height:60px; padding-left:25px; margin:0px !important;} .eventHding .plusIcon{margin:0px;  float:right; margin-left:15px; line-height:14px !important;} .plusIcon{float:right; color:#fff !important; padding:9px !important; border-radius:50% !important; background:#d25656 !important; margin:15px; cursor:pointer; border:none !important;} .EventsFeturs{width:100%; float:left; padding:6px 15px;} .EventsTxt{float:left; margin-left:20px;} .EventsTxt h4{color:#0e1a35;} .EventsFeturs span{margin-top:10px;} .EventsInpts{position: relative;} .EventsFeturs span, .feturBox span, .contImgHding span{text-transform:uppercase;width:35px; height:35px; border-radius:50%; background:#5384ff; float:left; font-size:16px; text-align:center; line-height:35px; color:#fff; font-family:"robotomedium",arial;} .contImgHding span img{width:100%;} .tbleDropDown h5.greenClor{width:100%; color:#4cc434; font-family:"robotomedium",arial; text-align: center;} .eventTable>tbody>tr>td{padding:2px !important; vertical-align:inherit !important;} .eventTable{margin-bottom: 0px !important;} .dottedDroupDawn{float:left; margin-left:15px; position:relative; cursor:pointer; top:0%; background:url(../images/dotted.png) no-repeat top; width:20px; height:19px;} .notifyChckBox{width: 15px !important; height: 15px !important; margin-top:1px !important;} 
+.each-btn{
+    margin-right: 10px;
+}
+
+.pie-chart{
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 50px 0px;
+}
+
+.chart.pie{
+    box-shadow: none !important;
+    width: 300px;
+    height: 300px;
+}
+
+.chart.pie .pie-legend li{
+    width: 100% !important;
+    background: none !important;
+}
+
+.chart{margin: 0px !important;}
+/*featuresTabs Css start*/   
+.featuresCont{width:100%; float:left; border:1px solid #d4d9e3; background:#fff;} .featuresInner{border-top:1px solid #d4d9e3; padding:20px;} .feturBox{width:70%; float:left; position: relative; padding-left:50px;} .feturBox span{margin-right:15px; position:absolute; left:0; top:3px; }.feturBox h4{color:#0e1a35; margin:0px !important; font-size:16px !important; text-transform: capitalize; height: 28px; line-height: 28px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp:1; -webkit-box-orient: vertical;} .feturBox h5{float:left; color:#8492af; margin-bottom:0px !important; margin-top: 7px !important;} .phoNo{ width: 35%; float: left;}.phoNo h5{float:right !important; color:#8492af !important;  font-family:"robotomedium",arial; text-align: right;} .fontClrChnge h5{width: 75%!; float: left; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; color:#0e1a35 !important; font-family:"robotomedium",arial;} .boxHding{float:left; width:100%;} .feturTxt{width:30%; float:left;} .feturTxt h5{color:#c9be07; margin: 0px !important; float:left;} .feturTxt span{float:right; margin-top:-4px; font-size:18px; position:relative; cursor:pointer; margin-left:10px;}  .Wdth100prcnt, .datepicker{width:100% !important;} .MoreTxt{margin:0; padding:10px 20px; text-align:center; border-top:solid 1px #ddd; color:#fff; background:#337ab7; display: block; clear: both; font-family:"robotomedium",arial; font-size:16px; cursor:pointer;} .MoreTxt a{color: #fff;} .tbleDropDown{width:100% !important; float:left;} .feturImg{float:right;} .feturTxtHding{float:right;} .feturState{width:100%;  height: 24px; float:left; color:#8492af; font-size:14px; margin-left:0px; line-height:24px;} .notsText p{width:80% !important; float:left; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; margin-bottom: 12px !important;} .contImgHding{width:65%; float:left;} .contImgHding h5{font-family:"robotomedium",arial; font-size:14px; margin-top:0px !important; margin-left:15px; float:left; margin-bottom:5px !important;} .contImgHding .contTxt{margin-left:15px; float: left; font-size:12px; color:#8492af; text-transform: capitalize;}
+
+.feturState{word-break: break-word;}
+
+.feturTxt select{border: 0; width:100%; -moz-appearance:none; -webkit-appearance:none; background:url('../images/arrnew.png');background-repeat: no-repeat;
+    background-position: right center;
+    box-shadow: none; padding-right:30px;}
+/*featuresTabs Css End*/ 
+
+/*Calander Css start*/  
+ .timepicker{display:none !important;}  .datepicker-days .table-condensed{width:100% !important; color:#000;} .datepicker-days .table-condensed>tbody>tr>td{padding:10px !important;}
+/*Calander Css End*/ 
+.active{margin-left:20px;} .Right_panelActive{left:4%; width:96%;} .left_panelActive{left:-12%;} .navigation ul li span.Active{float:right !important; padding-right:10px;} .leftSideBarActive{left:65% !important;} .mediaNav.mediaNavActive{bottom:0%;} .logo.logoActive{float: right; margin:0px -120px; padding:0 0 0 18px;}
+
+.Right_panel, .Right_panelActive{    
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s; 
+    -ms-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s; 
+} 
+
+.left_panel, .left_panelActive, .logoActive{    
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s; 
+}
+
+.navigation ul li span.Active, .navigation ul li a{    
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+
+}
+
+
+
+/*Log in Css start*/
+
+.header{background:#0e1a35;} .Loginlogo{width:184px; height:56px; margin:15px; float:left;} .navWrap{float:right;} .navWrap ul{width:100%; float:left; margin-bottom:0px !important;} .navWrap ul li{float:left; padding:0px 25px; color:#fff; line-height:81px; font-family:"robotomedium",arial; font-size:16px; border-bottom:5px solid #0e1a35; cursor:pointer;} .navWrap ul li a{color:#fff;} .navWrap ul li:hover{border-color:#5584ff;} .pagesInner{box-shadow:0px 0px 15px 0px rgba(45,45,31,0.3);} .LogInForm{padding:75px 0px; width:500px; margin:0 auto;} .LogInForm h1{color:#8492af; font-size: 24px !Important; text-align:center; margin-bottom:75px;} .LogInForm h1 span{color:#5584ff;} .input{width:100%; float:left; clear:both; border-bottom:1px solid #d4d9e3; margin-bottom:40px; position: relative;} .input span{width:10%; float:left;} .inputs{width:90%; float:left; padding-left:15px; border:none; font-size:14px; color:#000; line-height:40px;background: none !important;} .msg-inputs{width: 100% !important; line-height: normal;} #checkbox-edit{text-align: left !Important; border-bottom: none; margin: 0px;} #checkbox-edit span{text-align: center;} .enterBtn{ margin-top:55px !important; background:#5584ff !important; color:#fff !important; border:none !important; width:250px !important; height:60px; line-height:60px !important; padding:0px !important; border-radius:30px !important; font-family:"robotobold",arial; font-size:18px !important;} .enterBtn:focus{outline:0px auto -webkit-focus-ring-color !important;} .alrtbox{float: left; position: absolute; top: -14px; right: 0px; text-align: right; color: red;  height: 28px; line-height: 28px; font-size: 15px;} .msg-img{width: 100%; float: left;} .msg-img img{float: left;} .choose-img{width: 150px; height: 100px; float: left;} .choose-img img{width: 100%;} .choose-margin{margin-top: 30px;} .choose-wrapper{width: 100%; float: left; clear: both;} .remove-icon{position: absolute !important; font-size: 14px; margin-left: -15px; background: #000; color: #fff; padding: 5px; border-radius: 20px; margin-top: -10px; cursor: pointer;}
+
+/*Log in Css End*/  
+  
+/*issues Css start*/  
+.issuesHding{float: left; width: 18%; margin-top: 18px;} .issuesHding span{color:#8492af;} .issuesForm{width:100%; float: left; margin-top:25px; padding:20px 0; border:solid 1px #d5dae4; background: #fff; overflow: hidden; clear: both;} .issuesInput{width: 22%; float: left; margin:0% 1.5%;} .issuesInput label{float: left !important; font-family:"robotomedium",arial; font-weight:normal !important;} .issuesInputs{width: 100%; float: left; font-family:"robotomedium",arial; font-size: 14px; color: #000; border:1px solid #d4d9e3; line-height: 40px; padding-left: 10px;} .issuesInput select{width: 100%; float: left; padding-left: 10px; line-height: 42px; height: 42px; border:1px solid #d4d9e3 !important; cursor: pointer;} .issuesInput option{width: 100%; height: 42px !important; line-height: 42px !important; color:#000; padding-left: 10px; border-bottom:1px solid #d4d9e3;} .twoButton{float: left; width: 20%;} .filterBtn, .addBtn{width: 45%; float: left; margin: 18px 2.5% 0% 2.5% !important;} .filterBtn, .addBtn{ border-radius:30px !important; background:#f6f7fa !important; color: #8492af !important; font-size: 14px !important; font-weight: normal !important; font-family:"robotoregular",arial; border-color:#d4d9e3 !important;} .addBtn{background:#d25656 !important; color: #fff !important;} .addBtn:focus{outline:0px auto -webkit-focus-ring-color !important;} .filterBtn:focus{outline:0px auto -webkit-focus-ring-color !important;} .addBtn span{margin-right: 5px;} .issuesCont, .issueInnerCont, .issuesHdings{width: 100%; float: left;} .issueInnerCont{border-top:1px solid #d5dae4;} .issuesHdings, .detailsHding{margin-top: 50px;} .issuesHdings ul{width: 100%; float: left; margin-bottom: 0px !important;} .issuesHdings ul li{border:none !important; line-height: 25px !important; color: #8492af !important;} .issueInnerCont{margin: 25px 0px; height: 411px; overflow: auto; } .issueInnerCont ul{width: 100%; float: none; display: table; background: #fff; margin-bottom: 0px !important;  border-left:1px solid #d5dae4;} .issueInnerCont ul li, .issuesHdings ul li{text-align: left; float: left; font-size: 16px; color: #0e1a35; font-family:"robotomedium",arial; cursor: pointer; border-bottom:1px solid #d5dae4; border-right:1px solid #d5dae4; position: relative;} .issueInnerCont ul li.clrChnge{color:#4cc434;} .issueInnerCont ul li span{ margin-left: 25px; color: #8492af !important; font-size: 14px !important; font-weight: normal !important;}  .detailsHding{width: 100%; text-align: center; color: #8492af; line-height: 25px; font-size:16px; font-family:"robotolight",arial; margin-bottom:0px !important;} .detailsinner{border:1px solid #d5dae4; background:#fff; margin-top:25px;} .detailsinner ul{width:100%; float: left;  margin-bottom: 0px !important; padding:20px 0px;} .detailsinner ul li{width: 100%; float: left; padding-left: 20px; font-size: 16px; font-family:"robotomedium",arial; color: #0e1a35; line-height: 20px;} .detailsinner ul li.fontClrChnge{color: #8492af; font-family:"robotoregular",arial; margin-top: 20px; margin-bottom: 5px;} .detailsinner ul li.fontClrChnge:first-child{margin-top: 0px;} .detailsinner ul li.bderBtm{border-bottom:1px solid #d5dae4; padding-bottom: 25px;} .pagination{margin: 75px 0px 25px 0px !important;} .pagination ul li a{color: #000 !important;}  .{z-index:1000 !important;} .event_date{position: relative;} .hdings_edit_color{font-weight: normal !important; padding-left: 15px !important; color: #8392af !important} .issuesActive{background:#ccc;} .pages-button{float: right;} .width48prcentage{width: 48%;}
+    .issue-serch{ margin: 0px 10px !important;  position: relative; background: none !important; }
+      .issue-top-mrgn50px{ margin-top: 50px;} .issue-top-mrgn25px{ margin-top: 25px;} .issue-btm-mrgn25px{ margin-bottom: 25px !important;} #minus-top-mrgn40px{margin-top: -40px;}
+/*issues Css End*/ 
+
+/*Contacts Css Start*/  
+.contactHding{width: auto !important;} .contsBtns{margin:35px 0px;} .contsBtnsLeft, .contsBtnsRight{width: 50%; float: left; position: relative;} .contsBtnsRight{float: right; text-align: right;} .view-dropdown{right: 0px !important; left:initial !Important;} .selctBtn, .msgIcon{width:200px !important; text-align:left !important;  border-radius:30px !important; background: #f6f7fa !important; border:1px solid #d4d9e3 !important; color:#8492af !important; line-height: 50px !important; margin-right: 10px !important; padding:0px 15px!important;} .selctBtn span{color:#0e1a35;} .contsBtnsLeft .downIcon, .contsBtnsRight .downIcon{color:#8492af !important; vertical-align: middle; margin-left: 60px;} .msgIcon{width:auto !important; color: #8492af !important; padding: 0px 25px !important;} .ContactNavRsult{width: 100%; float: left;} .ContactNavRsult ul{width: 100%; float: left; margin-bottom: 0px !important;} .ContactNavRsult ul li{width:23.75%; float:left; font-family:"robotomedium",ariall;  background: #fff; color: #0e1a35; line-height:60px; float:left; font-size:16px; padding-left:15px; border-right:1px solid #d5dae4; border-bottom:1px solid #d5dae4;} .editChckBox{width:25px !important; height:25px !important;  border-color:#6d6d6d !important; background:none !important;} .ContactNavRsult ul li.fontClrChnge2{color:#8492af !important;} .ContactNavRsult ul li .ContactProfile{line-height: normal; padding: 7.2px 0px;} .ContactsNav, .ContactsNav ul{width: 100%; float: left; } .ContactsNav ul{margin-bottom: 0px !important;} .ContactsNav ul li{width:23.75%; float:left; font-family:"robotomedium",ariall; color: #8492af; line-height:60px; float:left; font-size:16px; padding-left:15px;} .ContactsNav ul li:first-child{margin-left: 5%;}
+/*Contacts Css End*/ 
+
+/*User Css Start*/ 
+.userRsult, .ContactsRsult{border-top: 1px solid #d5dae4; border-left: 1px solid #d5dae4;} .userNav ul, .userNavRsult ul{width: 100%; float: left; margin-bottom: 0px !important;} .userNavRsult ul{background:#f6f7fa;} .userNavRsult ul:hover{background:#fff;} .userNav ul li{width:30%; float:left; font-family:"robotomedium",ariall; color: #8492af; line-height:60px; float:left; font-size:16px; padding-left:15px;} .userNav ul li:first-child{ margin-left: 10%;} .userNavRsult ul li{width:30%; cursor: pointer; float:left; font-family:"robotomedium",ariall;  color: #0e1a35; line-height:60px; float:left; font-size:16px; padding-left:15px; color: #0e1a35; border-right: 1px solid #d5dae4; border-bottom: 1px solid #d5dae4;} .userNavRsult ul li:first-child{width: 10%; text-align:center !important; padding-left: 0px !important;} .userProfile{width: 100%; float: left;} .userImg{float: left;} .userImg img{width: 100%;} .userHding{float: left; font-size: 14px; font-family:"robotomedium",ariall;  color: #0e1a35; margin-left: 15px;} .ContactNavRsult ul li:first-child{width:5%; text-align:center !important; padding-left: 0px !important;} .userEditHding, .allowHding{width: 100%; float: left; color:#8492af; font-family:"robotomedium",ariall; padding-left: 15px; line-height: 60px; font-size: 16px; margin-bottom: 0px !important;} .userEditHding{margin-top: 40px;} .userEditWrap{border:1px solid #d5dae4;} .controlBox{float: right; margin: 15px;} .allowHding{width: auto;} .accessWrap{border-bottom:1px solid #d5dae4; background: #f3f4f6;} .controlBtn{background: #f3f4f6;} .controlBtn ul{width: 100%; float:left; margin-bottom: 0px !important; background:#f3f4f6; } .controlBtn ul li{float: left; width: 100%;} .controlBtn ul li span{float: left; line-height: 46px;  color:#0e1a35; font-family:"robotomedium",ariall; padding-left: 15px; font-size: 16px;} .controlAccess{float: right; margin:15px 15px 0px 0px;} .inrcontnt{width:100%; clear:both; display:table; margin-bottom:45px; background: #f9fafc;} .accordionWrap{clear:both; width:100%; float:left; margin-bottom:5px; border-bottom:1px solid #d5dae4;} .heading{cursor:pointer; line-height:60px; color:#8492af; padding-left:15px; background: #f9fafc; font-family:"robotomedium",arial; font-size:20px;} .bg_orng{position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:-1;} .inrcontnt a:hover{color:#f58b3e;} .accordCont{width:100%; clear:both; float:left; background:#f3f4f6; margin-bottom:5px; display:none;} .notopen{background:url(../images/arrow-ryt.png) no-repeat 95% 50%;} .opened{background:url(../images/arrow-btm.png) no-repeat 95% 50%;} 
+
+/*Control Button Css Start User Page*/ 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+}
+
+.switch input {display:none;}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ca4040;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider{background-color: #24a12c;}
+input:focus + .slider{box-shadow: 0 0 1px #24a12c;}
+input:checked + .slider2{background-color: #24a12c;}
+input:focus + .slider2{box-shadow: 0 0 1px #24a12c;}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round{border-radius: 20px;}
+.slider.round:before{border-radius: 50%;}
+/*Control Button Css End User Page*/ 
+/*User Css End*/ 
+
+/*Date Picker Css Start*/
+.dateInputs{height:40px !important; line-height:40px !important; background:#fff url(../images/calender.png) o-repeat 97% 50% !important; color:#808080 !important; padding:0px 0px 0px 10px !important; cursor:pointer;} 
+#dateInput{display: none; padding-left: 15px;}
+/*Date Picker Css End*/  
+
+.mrgn0px{margin: 0px !important;} 
+.mrgnLft15px{margin-left: 15px !important;}
+.mrgnRyt10px{margin-right: 10px !important;}
+.mrgnBtm15px{margin-bottom: 15px !important;}
+.mrgnBtm25px{margin-bottom: 25px !important;}
+.mrgnTop25px{margin-top: 25px !important;}
+.mrgnTop15px{margin-top: 15px !important;}
+.mrgnTop30px{margin-top: 30px !important;}
+.mrgnTop50px{margin-top: 50px !important;}
+.mrgnTtb25px{margin-top: 25px !important; margin-bottom: 25px !important;}
+.pding0px{padding:0px !important;}
+.pdgLft0px{padding-left: 0px !important;}
+.mrgnTop98px{margin-top: 98px !important;}
+.bder0px{border: 0px !important;} 
+
+.edit-dropdown{background:transparent !Important; padding: 0px 12px !important; border-color:transparent !Important; color:#000 !important; outline: 0 !important; box-shadow:none !important;}
+.selctBtn:focus{outline:0px auto -webkit-focus-ring-color !important;}
+.plusIcon:focus{outline:0px auto -webkit-focus-ring-color !important;}
+.dropdown-menu-edit{ left:-130px !important; }
+.dropdown-menu li{float: none !important; padding: 0px !important; line-height: 0px !important;}
+.inputs-fields{ position: relative; border: 0 !important; box-shadow: none !important; border-bottom:1px solid #d5d9e4 !important; border-radius: 0px !important; color: #8392af !important;} .issues-loading{position: absolute !important; right: 0px; z-index: 100;}
+.checkbox-heading label{color:#8392af;}
+.modal-header-bcChange{background:#0f1a36 !important;} .modal-header-bcChange h4, .modal-header-bcChange button{color: #fff !important;} .modal-header-bcChange button{opacity: 1 !important;} .pull-center{text-align: center !important;} .save-btn{background: #5684fe !important; border-radius: 30px !important; padding: 15px 75px !important; color: #fff !Important; outline: 0 !important; font-family:"robotomedium",ariall; font-weight: 300px !important;}
+@media (max-width:1366px){.feturBox h5, .feturTxt h5, .feturState{font-size:12px !important; line-height: 1em;} .EventsFeturs{padding:5px 15px;} .featuresInner{padding:15px;} .tebleHding h3{padding-left:15px;} .plusIcon{margin:14px;} .contHding h1, .issuesHding h1{font-size: 30px;}}  
+
+@media (max-width:1280px){.feturBox h4{font-size:14px !important; line-height: 2em;} .EventsTxt h4, .feturTxt h5, .feturState, .fontClrChnge h5{font-size:12px;} .fontClrChnge h5{width:65%;} .tebleHding h3, .eventHding h3{font-size:18px;}
+    .contHding h1{font-size:24px;} .issuesHding{width:15%;} .contHding h1, .issuesHding h1{font-size:20px !important;}  .filterBtn, .addBtn{font-size:12px !important;} .twoButton{width: 22%;} .pagination{margin: 50px 0px 25px 0px !important;}
+    .logo{margin:0; padding:0 0 0 30px;} .icon_right{margin-right: 25px;} .issueInnerCont ul li, .issuesHdings ul li, .detailsinner ul li, .detailsHding, .userNav ul li, .userEditHding, .allowHding, .ContactNavRsult ul li{font-size: 14px;} .heading{font-size: 16px;}
+}  
+
+@media (max-width:1180px){.left_panel, .icon_right, .media_icon{display:none !important;} .Right_panel{width:100%; left:0%;} .top_wrapper{background:#0e1a35;} .whitClr{color: #fff !important;} .Homelogo{margin:10px 20px 0;} .Homelogo, .mediaNav{display:block !important;} .mediaNavIcon{float:right; margin:20px 25px; display:block; position:relative; z-index:100;} .contHding{text-align:center; border-bottom:1px solid #d4d9e3; padding-bottom:10px; } .eventHding .plusIcon{float:right; margin-left:0px; margin-right:15px;} .featuresCont{margin: 10px 0px;}  .featuresTabs{overflow:hidden;} .mediaNav{display:block;} .tebleHding h3, .eventHding h3{padding-left: 25px !important;} .contHding{border-bottom:none !important; padding-bottom: 0px;} 
+
+.mediaNavIcon, .mediaNavActive, .mediaNav, .mediaNavActive{
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+} 
+
+} 
+
+
+@media (max-width:980px){#dateInput{display: block;}
+
+} 
+@media (max-width:1000px){.eventHding .plusIcon{float: right !important;}}
+@media (max-width:500px){.LogInForm{width: 95%;} .logo{width: 120px; height: auto;} .navWrap ul li{line-height: 66px;}}
+@media (max-width:400px){.navWrap ul li{font-size: 14px; padding: 0px 12px;}}
+
+.left_panel li a{font-size:14px;}
+
+.left_panel img.logo-closed-nav{display: none;}
+.left_panel.left_panelActive img.logo-closed-nav{
+    display: inline-block;
+    width:40px;
+}
+
+.left_panel.left_panelActive img.logo-open-nav{display: none;}
+.issueInnerCont ul li{
+    display: table-row;
+    float:none;
+    transition:background 350ms ease 0s;
+    -webkit-transition:background 350ms ease 0s;
+    -moz-transition:background 350ms ease 0s;
+    position: relative;
+}
+
+.issueInnerCont ul li:nth-child(even){background#f9f9f9;}
+.issueInnerCont ul li div:first-child{border-left: solid 5px transparent;}
+
+#issue-div ul li .checkbox-div:first-child{border-left: solid 5px transparent;}
+
+#issue-div ul li .checkbox-div:hover{ border-left: solid 5px #5584ff;}
+
+#issue-div ul li div:first-child{border-left:solid 0px transparent;}
+
+.issueInnerCont ul li:hover{
+    background: #efefef;
+    position: relative;
+}
+
+.issueInnerCont ul li:hover div:first-child{border-left:solid 5px #5584ff;}
+.contactissuehdings ul li.col-xs-12:first-child{width: 9%;} .contactissuehdings ul li.col-xs-12{width: 29%;}
+.issueInnerCont ul li div.col-xs-12{
+    display: table-cell;
+    float:none;
+    border-right:solid 1px #dadee7;
+    border-bottom:solid 1px #dadee7;
+    padding:25px 10px 25px 10px;
+    word-wrap: break-word;
+    word-break: initial;
+}
+
+.deatilcase{
+    word-break: break-word;
+    -ms-word-break: break-word;
+}
+
+.heading-wrapper{
+    display: block; 
+    clear:both;
+    width: 100%;
+    margin-top:0;
+    font-size:30px;
+    font-weight:300;
+} 
+
+.btn-grp{padding-top:25px;}
+.btn-grp button, .contact-btn-grp button{width:48%;}
+.btn-grp button:last-child{float:right;} 
+.add-contact-btn button{width:100%;}
+.issuesHdings ul li{font-size:18px; }
+.posted-dt{color:#f1f1f1; display: block; margin:0 !important; text-align:left; line-height: 2em; font-family: "robotolight",arial;}
+.detailsHding{font-size:18px; font-family: "robotomedium",arial;}
+.detailsinner{border-top:solid 5px #5584ff;}
+.detailinnerblock{padding:10px 20px 0px 20px;}
+
+.appellantsname-detail{border-top: solid 1px #d6dbe4;}
+.mlaconstituency-detail{padding-bottom: 30px;}
+.headingcase{
+  font-weight:500;
+  padding-bottom:5px;
+  display: block;
+  color:#8492af;
+}
+
+#sidedetails .detailsHding{margin-top:0; display: none;} 
+#sidedetails .modal-body{overflow: hidden;}
+#sidedetails .modal-content, #sidedetails .modal-footer{
+    border:0;
+    box-shadow:none;
+    background:transparent;
+}
+#sidedetails .modal-body{padding:20px;}
+.issueInnerCont ul li select{
+    background:transparent;
+    border: 0;
+    box-shadow: none;
+    outline:0;
+    padding: 0px !important;
+}
+
+.issue-right-panel{
+    width: 100%;
+    float: left;
+}
+
+
+.posted-name{ float: left; color: #31708f;  margin-left: 0px !important;}
+.issueInnerCont ul li select:focus, .issueInnerCont ul li select:active{outline:0; box-shadow: none;}
+.contactissuehdings{width: 100%; float: left; margin-top: 50px;}
+.contactissuehdings ul li{font-size: 18px; color:#8492af; font-family: "robotomedium",arial;}
+.detailcontact{padding-left:80px !important; position: relative;}
+
+
+.checkboxcontent{position: relative;}
+
+.issue_unchecked_contact{position: relative; height: 20px; background:url('../images/unchecked.png') no-repeat center; margin-left: -17px;}
+.issues_checkbox{position: absolute; width: 20px;  height: 20px;  background:url('../images/checked.png') no-repeat center !important; margin-left: 0px; margin-top: -17px;}
+
+
+
+.checkbox-div:hover{border-left: solid 5px #5584ff;}
+
+.checked_contact .checkboxcontent:after{ content:''; position: absolute; height:20px; width:20px; top:50%; left:50%; background:url('../images/checked.png') !important; margin-left:-10px; margin-top:-10px;}
+.unchecked_contact .checkboxcontent:after{content:''; position: absolute; height:20px; width:20px; top:50%; left:50%; background:url('../images/unchecked.png'); margin-left:-10px; margin-top:-10px;}
+.detailcontact span{background:#ccc; height:50px; width:50px; position: absolute; left:0; top:50%; margin-top: -25px;    margin-left:15px !important; border-radius: 100%;}
+.navigation ul li.bc{background: #000 !important;}
+.right{float: right !important;}
+.featuresTabs{margin-top:40px; clear:both;}
+.calender-main{overflow: hidden; background:#fff; padding:20px 10px 10px;border: 1px solid #d4d9e3;}
+.more-droup-dawn{display: none;}
+#sidedetails .userEditWrap{border:0;}
+#sidedetails .userEditHding{display: none;} 
+
+li.current_detail_show{background: #efefef !important; position: relative;}
+
+li.current_detail_show div:first-child{border-left solid 5px #5584ff !important;}
+.issues-body nav.navigation li.issues-li,.dashboard-body nav.navigation li.dashboard-li, .contacts-body nav.navigation li.contacts-li, .events-body nav.navigation li.events-li, .notes-body nav.navigation li.notes-li, .users-body nav.navigation li.users-li,.voters-body nav.navigation li.voters-li {background: #122143; border-left-color: #5584ff;}
+.events_container{background:#fff;}
+.events_container table tr td{border-left:0 !important; border-right:0 !important; }
+.events_container .EvntsMore{border:1px solid #ddd; border-top: 0;}
+
+.table-height-fix{
+    width: 100%;
+    float: left;
+    height: 235px;
+    overflow: hidden;
+    position: relative;
+    border1px solid #ccc;
+}
+.no-data{ width: 100%; position: absolute; top: 50%; text-align: center; font-size: 24px; font-family: 'robotobold',arial; color: #0e1a35; }
+
+#notes-inner-div .feturImg{float:left;}
+#notes-inner-div .feturBox{width:100%;}
+
+@media (max-width:991px){ 
+.pding25px{
+    padding: 25px 25px 0px 25px;
+}
+
+.detailsinner{
+    margin-top: 15px;
+}
+
+.issueInnerCont{
+    margin: 60px 0px 25px 0px;
+}
+
+.issuesHdings, .detailsHding{
+    margin-top: 20px;
+}
+
+.userEditHding{
+    margin: 0px;
+}
+
+.issueInnerCont ul li div.col-xs-12{
+    display: block;
+    padding:5px 10px;
+    border:0;
+}
+
+.contact-srchBox{
+    width: initial !important;
+}
+
+.posted-name{
+    float: none;
+}
+
+.issueInnerCont{
+    height: 490px;
+}
+
+.featuresCont{
+    margin: 0px 0px 25px 0px;
+}
+
+#issue-div ul li .checkbox-div:first-child{
+    border: 0px;
+}
+
+.issueInnerCont ul li{ 
+    padding:20px 0;
+    display: block;
+    width: 100%;
+}
+ 
+.issueInnerCont ul li:hover div:first-child{
+    border:0;
+}
+
+.issueInnerCont ul li:hover{
+    border-left:solid 5px #5584ff;
+}
+
+.issueInnerCont ul li{
+    padding-left: 80px;
+    position: relative;
+}
+
+#user-details ul li{
+    padding-left: 10px; 
+} 
+
+.issue-serch{
+    margin: 0px !important;
+}
+
+.issue-srchBox span{
+    right: 7px !important; 
+}
+
+.detailcontact{padding:25px 0 25px 80px !important;}
+    .checkboxcontent{position: absolute !important; left:30px; top:50%; margin-top: -5px; height:20px; width:20px !important; }
+    .events-body .issueInnerCont ul li, .issues-body .issueInnerCont ul li, .notes-body .issueInnerCont ul li{padding-left:20px; position: relative;}
+    .pdgLft0px{padding:0 !important;}
+    .events_container, .featuresTabs{margin-top:25px;}
+    .issuesHdings, .contactissuehdings{
+        display: none;
+    }
+
+    .issueInnerCont ul li div.checkbox-div{
+        display: table-cell;
+        padding-left: 30px;
+    } 
+    .issueInnerCont ul li{
+        float: left;
+    }
+    .contHding h1{
+        margin-left: 0px !important;
+    }
+
+}
+
+@media (max-width:768px){
+.pages-button{
+    float: left;
+}
+
+.issuesDetails{
+    display: none;
+}
+
+.issueInnerCont{
+    margin: 25px 0px;
+}
+
+#user-details{
+    margin: 60px 0px 25px 0px;
+}
+
+.width48prcentage{
+    width: 100%;
+}
+.issue-top-mrgn50px{
+    margin-top: 0px;
+}
+.issue-top-mrgn25px{
+    margin-top: 0px;
+}
+.issue-btm-mrgn25px{
+    margin-bottom: 15px !important;
+}
+#minus-top-mrgn40px{
+    margin-top: 0px;
+}
+.each-btn{
+    margin-bottom: 10px !important;
+    float: left;
+}
+
+}
+
+
+
+.notify-location{display:none;}
+.notify-location-radio{display:none;}
+
+
+
+
+.issue-srchBox{
+    float: right;
+    position: relative;
+} 
+
+.issue-srchBox span{
+    width:20px; 
+    height: 20px;
+    position: absolute;
+    top: 7px; 
+    right: 0px;
+    background: url(/images/search-icon.png) no-repeat !important;
+}
+
+.issues-control-button{
+    float: left;
+    clear: both;
+    margin-top: 15px;
+}
+
+.issues-heading-wrapper{
+    width: initial;
+    float: left;
+}
+
+@media (max-width:499px){
+    .each-btn{
+        width: 47%;
+        margin-right: 3%;
+    }
+
+    .heading-wrapper{
+        width: 100%;
+    }
+.issue-srchBox, .pages-button{
+    width: 100% !important;
+    float: left;
+}
+
+.issue-serch{
+    background: #fff !important;
+}
+
+.Homelogo{
+    margin: 10px 10px 0;
+}
+
+.contHding h1, .issuesHding h1{
+    font-size: 18px;
+}
+
+}

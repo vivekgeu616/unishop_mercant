@@ -1,0 +1,91 @@
+.admin-gallery, .admin-gallery-inner{
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+.admin-gallery-img{
+	width: 100%;
+	height: 200px;
+	background-size: cover !important;
+	border: 1px solid #cccccc;
+	margin-bottom: 25px;
+}
+
+.admin-close-btn{
+	position: absolute;
+	top: 5px;
+	right: 40px;
+	color: #000 !important;
+	opacity: 0.9 !important;
+}
+.admin-close-btn1{
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	color: red !important;
+	opacity: 0.9 !important;
+}
+
+.star-wrapper{
+	position: absolute;
+	background: url(/images/star.png) no-repeat;
+	background-size: cover;
+	top: 5px;
+	left: 20px;
+	width: 32px;
+	height: 32px;
+	z-index: 1;
+}
+
+.star-wrapper-filled{
+	position: absolute;
+	background: url(/images/star_bc.png) no-repeat;
+	background-size: cover;
+	top: 5px;
+	left: 20px;
+	width: 32px;
+	height: 32px;
+	z-index: 1;
+}
+
+.admin-img-content{
+	width: 100%;
+	color: #333333;
+	float: left;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: "montserratregular",Arial;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 40px;
+	margin-bottom: 10px;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+}
+
+#admin-modal{
+	width: 100%;
+	float: left;
+	padding-bottom: 25px;
+}
+
+#checkbox-wrapper{
+	line-height: 25px;
+}
+
+.save-btn{
+	float: left;
+	margin: 10px 0px;
+}
+
+.admin-checkbox{
+	width: 20px;
+	height: 20px;
+}
+.create-butn{
+	height: 45px !important;
+	width: 250px !important;
+
+}

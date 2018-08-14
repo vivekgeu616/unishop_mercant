@@ -1,0 +1,139 @@
+.dsCountDown:after{
+	content:'';
+    clear: both;
+}
+
+.dsCountDown{
+    display:inline-block;
+	*display: inline;
+    zoom: 1;
+}
+
+/* ------------------------- White Theme ------------------------- */
+.dsCountDown.ds-white {
+	color: #000;
+	position: absolute;
+	right:50px;
+	top:8px;
+	font-family: Arial, Helvetica, sans-serif, serif;
+	font-size: 1em;
+  	margin:0px 0 0px;
+	border-radius: 2px;
+	background: transparent !important; /* Old browsers */
+}
+
+.ds-element-value, .ds-element-title{
+  /*background:url('../images/text-bg.png');*/
+  color:#fff;
+  padding:0px 0 0px;
+  width:51px;
+}
+
+.ds-element-days .ds-element-value, .ds-element-days .ds-element-title, .ds-element-minutes .ds-element-value, .ds-element-minutes .ds-element-title{
+  /*background:url('../images/days-bg.png');*/
+}
+
+.ds-element-title{
+  padding: 0 0 5px 0;
+}
+
+.ds-white .ds-element {
+	float: left;
+	margin-right: 0px;
+	text-align: center;
+}
+
+.ds-element{
+  padding-bottom:0px;
+  /*border-bottom:solid 2px #fff;*/
+}
+
+.ds-element-days, .ds-element-minutes {
+  /*border-bottom:solid 2px #fff !important;*/
+}
+
+
+.dsCountDown.ds-white > .ds-element.ds-element-seconds {
+	margin-right: 0;
+	padding-right: 0;
+	border-right: 0;
+}
+
+.ds-white .ds-element-title {
+	font-size: 0.6em;
+	text-transform: capitalize;
+	text-shadow:1px 1px 1px rgba(0,0,0,0.3);
+
+}
+
+.ds-white .ds-element-value {
+	font-size: 1em;
+	color: #fff;
+	font-weight:300;
+	text-shadow:1px 1px 1px rgba(0,0,0,0.3);
+}
+
+/*.ds-element-days{display: none;}*/
+
+.counterbirthday{background:rgba(0,0,0,0.1); padding:5px ;}
+
+
+
+.counterbirthday h2{color:#eaeaea; text-align: right; padding-right:220px; font-size:10px;    letter-spacing: 0.7px; text-align: right;}
+.ds-element-hours, .ds-element-minutes, .ds-element-days{position: relative;}
+
+.ds-element-days:after{content: ''; height:3px; border-radius:50px; -webkit-border-radius:50px; -moz-border-radius:50px; right:0; top:5px; width:3px; position: absolute; display: block; background:#fff;}
+.ds-element-days:before{content: ''; height:3px; border-radius:50px; -webkit-border-radius:50px; -moz-border-radius:50px;  width:3px; right:0; bottom:14px; position: absolute; display: block; background:#fff;}
+
+
+.ds-element-hours:after{content: ''; height:3px; border-radius:50px; -webkit-border-radius:50px; -moz-border-radius:50px; right:0; top:5px; width:3px; position: absolute; display: block; background:#fff;}
+.ds-element-hours:before{content: ''; height:3px; border-radius:50px; -webkit-border-radius:50px; -moz-border-radius:50px;  width:3px; right:0; bottom:14px; position: absolute; display: block; background:#fff;}
+.ds-element-minutes:after{content: ''; height:3px; border-radius:50px; -webkit-border-radius:50px; -moz-border-radius:50px; right:0; top:5px; width:3px; position: absolute; display: block; background:#fff;}
+.ds-element-minutes:before{content: ''; height:3px; border-radius:50px; -webkit-border-radius:50px; -moz-border-radius:50px;  width:3px; right:0; bottom:14px; position: absolute; display: block; background:#fff;}
+
+.bdaycoupon-code{display: block; position: absolute; right:250px; top:7px; background:#F8D54C; padding:3px 5px; cursor:hand;}
+
+.bdaycoupon-code span{ font-size: 10px; padding: 0 2px; display: block; border: dotted 2px #229A8B; line-height: 14px; }
+
+.counterbirthday.bdaycoupon h2{padding-right:390px;}
+
+.counterbirthday.counterbirthdayinner h2{color:#fff;  text-align:right; text-transform:uppercase; font-weight:100;  display:inline-block; padding-right:0; vertical-align:top; font-size:15px; padding-right:30px;}
+
+.counterbirthday.counterbirthdayinner{padding:3px; background:#229A8B; position: relative;}
+
+.counterbirthday.counterbirthdayinner .ds-white .ds-element-value{font-size:2em;}
+
+.counterbirthday.counterbirthdayinner .ds-white .ds-element-title{font-size:0.7em;}
+
+.counterbirthday.counterbirthdayinner .ds-element-value, .counterbirthday.counterbirthdayinner .ds-element-title{width:65px;}
+
+ .counterbirthday.counterbirthdayinner .dsCountDown.ds-white{top:initial; display: inline-block;  vertical-align:top; right:initial; position: relative; float:none !important;}
+
+.counterbirthday.counterbirthdayinner .border-countercover{border: dotted 1px #F8D54C; padding:13px 0 5px;}
+
+.counterbirthday.counterbirthdayinner h2 span.tuned{color:#F8D54C; font-weight:600; font-weight:900; font-size:12px;}
+
+.counterbirthday.counterbirthdayinner .bdaycoupon-code span{border:0; font-size:15px;}
+
+.counterbirthday.counterbirthdayinner .border-countercover .hurry{font-weight:900; color:#F8D54C;}
+.counterbirthday.counterbirthdayinner .bdaycoupon-code{right:initial; top:initial; position: relative; display: inline-block;}
+
+.hurry-container{font-size:12px;}
+
+@media screen and (max-width:900px) {
+.counterbirthday.counterbirthdayinner h2{text-align:center; margin-bottom:10px;}
+
+#time-div .counterbirthday.counterbirthdayinner h2 br{display: none;}
+
+
+
+
+.counterbirthday.counterbirthdayinner h2 span.tuned{font-size:16px; padding-left:3px;}
+
+
+}
+
+@media screen and (max-width:767px) {
+	.counterbirthday.counterbirthdayinner{display:none;}
+}
+
