@@ -142,42 +142,56 @@ class AdminController extends Controller
         for($i=2;$i<count($file);$i++)
         {
             $table_name[$i] = rtrim($file[$i],".csv");
-             $file_content = explode("\n",file_get_contents("/home/vivek/Downloads/demo/".$file[$i]));
-             // dd($file_content);
-             foreach ($file_content as $key => $value) {
-                 $content[] = explode(",", $value);
-             }
-             // dd($content);
-
-            switch($table_name[$i])
-            {
-                case "Item_master":
-                     
-                    foreach ($content as $key => $item) 
+             
+                  switch($table_name[$i])
                     {
-                        $Item_master = new ItemMaster;
-                        $Item_master->store_code = $item; 
-                        $Item_master->item_code = $item; 
-                        $Item_master->item_name = $item; 
-                        $Item_master->mrp1 = $item; 
-                        $Item_master->selling_price = $item; 
-                        $Item_master->promo = $item; 
-                        $Item_master->weighted_flag = $item;  
-                        dd($Item_master);
-                        $Item_master->save();
+                        case "Item_master":
+
+                                $file_content = explode("\n",file_get_contents("/home/vivek/Downloads/demo/".$table_name[$i].".csv"));
+                                foreach ($file_content as $key => $value) {
+                                $content[] = explode(",", $value);
+                              
+                                $Item_master = new ItemMaster;
+                                $Item_master->store_code = $content[$key][0]; 
+                                $Item_master->item_code = $content[$key][1]; 
+                                $Item_master->item_name = $content[$key][2]; 
+                                $Item_master->mrp1 = $content[$key][3]; 
+                                $Item_master->selling_price = $content[$key][4]; 
+                                $Item_master->promo = $content[$key][5]; 
+                                $Item_master->weighted_flag = $content[$key][6]; 
+                                $Item_master->save();
+                                }
+                            
+                        break;
+
+                        case "Price_master":
+                                
+                                unset($content);
+                                $content = array();
+
+                                $file_content = explode("\n",file_get_contents("/home/vivek/Downloads/demo/".$table_name[$i].".csv"));
+                                foreach ($file_content as $key => $value) {
+                                $content[] = explode(",", $value);
+                                
+                                $Item_master = new PriceMaster;
+                                $Item_master->store_code = $content[$key][0]; 
+                                $Item_master->item_code = $content[$key][1]; 
+                                $Item_master->item_name = $content[$key][2]; 
+                                $Item_master->mrp1 = $content[$key][3]; 
+                                $Item_master->selling_price = $content[$key][4]; 
+                                $Item_master->promo = $content[$key][5]; 
+                                $Item_master->weighted_flag = $content[$key][6]; 
+                                $Item_master->save();
+                                }
+
+                        break;
+
+                        default:
+                        break;
+
+
                     }
-                    
-                break;
-
-                case "Price_master":
-                     $Item_master = new PriceMaster;
-                     dd("hi");
-                break;
-
-            }
-            
-            
-        }
+             }
         
      }
 
